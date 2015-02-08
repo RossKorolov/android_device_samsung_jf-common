@@ -139,6 +139,13 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
+# Loki
+PRODUCT_PACKAGES += \
+    loki_tool \
+    loki.sh \
+    loki_bootloaders \
+    recovery-transform.sh
+
 # Media Profile
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
@@ -239,6 +246,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.fill_eons=1 \
     persist.radio.use_se_table_only=1 \
+    rild.libpath=/system/lib/libsec-ril.so \
     ro.telephony.ril.config=newDriverCallU,newDialCode \
     ro.ril.telephony.mqanelements=6
 
